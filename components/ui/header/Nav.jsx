@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { getHeaderNav } from "@/lib/ui";
+import { getHeaderNav } from "@/content/data/ui";
 
 const Nav = () => {
   const nav = getHeaderNav();

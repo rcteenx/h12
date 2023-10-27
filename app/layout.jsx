@@ -12,10 +12,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "H12 Çalışmaları",
-    template: "%s | H12 Çalışmaları",
+    default: smd.title,
+    template: "%s | " + smd.title,
   },
-  description: "H12 Çalışmaları detaylı olarak anlatılıyor.",
+  description: smd.description,
 };
 
 export default function RootLayout({ children }) {
