@@ -5,36 +5,53 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
     extend: {
-      colors: {
-        dark: "#1b1b1b",
-        light: "#fff",
-        accent: "#7B00D3",
-        accentDark: "#ffdb4d",
-        gray: "#747474",
-      },
       fontFamily: {
-        mr: ["var(--font-mr)"],
-        in: ["var(--font-in)"],
+        base: ["var(--font-base)", "sans-serif"],
       },
-      animation: {
-        roll: "roll 24s linear infinite",
-      },
-      keyframes: {
-        roll: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(-100%)" },
+      colors: {
+        primary: {
+          DEFAULT: "#8c8c8c",
         },
-      },
-      screens: {
-        sxl: "1180px",
-        // @media (min-width: 1180px){...}
-        xs: "480px",
-        // @media (min-width: 480px){...}
+        indigo: {
+          DEFAULT: "#333366",
+          light: {
+            1: "#444477",
+            2: "#555588",
+            3: "#666699",
+            4: "#7777AA",
+            5: "#8888BB",
+          },
+          dark: {
+            1: "#2A2A5C",
+            2: "#1F1F50",
+            3: "#141446",
+            4: "#0A0A3B",
+            5: "#000031",
+          },
+        },
+        accent: {
+          DEFAULT: "#FFD700",
+        },
+        indigo2: "#5b5b84",
+        gray40: "#666666",
+        "coral-red": "#FF6452",
+        "indigo-gray": "#6D6D6D",
+        "pale-blue": "#F5F6FF",
+        "white-400": "rgba(255, 255, 255, 0.80)",
       },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar"),
+  ],
 };
